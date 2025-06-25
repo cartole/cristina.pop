@@ -1,0 +1,189 @@
+/* Estilo de galería en cascada de 2 columnas */
+.galeria-cascada {
+   grid: 1;
+  column-gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.galeria-cascada img {
+   width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+  display: inline-block;
+}
+
+.galeria-cascada img:hover {
+  transform: scale(1.02);
+}
+
+/* Lightbox con botón de cerrar */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 20px;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.7);
+}
+
+/* Botón X para cerrar */
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #ff69b4;
+  z-index: 1100;
+}
+
+.cerrar:hover {
+  color: #ff69b4;
+}
+/* Fondo rosa animado */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #ffd6ec, #ffe9f3, #ffcbe6, #ffeaf7);
+  background-size: 400% 400%;
+  animation: animarFondo 12s ease infinite;
+  color: #4d0039;
+}
+
+@keyframes animarFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Botón de volver estético */
+a.volver {
+  display: inline-block;
+  background: linear-gradient(to right, #ff66a3, #ff99cc);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a.volver:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+  background: linear-gradient(to right, #ff99cc, #ff66a3);
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #833b63;
+}
+/* Galería responsive y uniforme */
+.galeria-uniforme {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Imágenes rectangulares por defecto */
+.galeria-uniforme img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+}
+
+.galeria-uniforme img:hover {
+  transform: scale(1.02);
+}
+
+/* En móviles: que las fotos sean cuadradas */
+@media (max-width: 600px) {
+  .galeria-uniforme img {
+    height: 100vw; /* cuadrado del ancho total de pantalla */
+    max-height: 100vw;
+  }
+}
+
+.video-seccion {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  background: rgba(255, 240, 250, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.video-seccion h2 {
+  color: #d63384;
+  margin-bottom: 1rem;
+}
+
+/* Para video subido */
+.video-personal {
+  width: 100%;
+  max-height: 450px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
+
+/* Para iframe de YouTube */
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}

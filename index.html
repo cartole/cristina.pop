@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestreos Álbumes de Fotos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Nuestros Recuerdos en Fotos</h1>
+  </header>
+
+  <main class="albumes">
+    <div class="album">
+      <a href="pequeñas.html">
+        <img src="peques/ptpeq.jpg" alt="Lokura💫">
+        <h2>Lokura💫</h2>
+      </a>
+    </div>
+    <div class="album">
+      <a href="eduso.html">
+        <img src="Eso/pptpau.jpg" alt="Mi Diva😏👯Tufo-Huevo🥚💨🤢Gorda Pedorra Una De La People A La Que Más Iubesc">
+        <h2>Mi Diva😏👯Tufo-Huevo🥚💨🤢Gorda Pedorra Una De La People A La Que Más Iubesc</h2>
+      </a>
+    </div>
+    <div class="album">
+      <a href="bachi.html">
+        <img src="bachiller/portada.jpg" alt="Pau panes y Cristina marinera">
+        <h2> Pau panes y Cristina marinera⚓🥺</h2>
+      </a>
+    </div>
+    <!-- Añade más álbumes aquí -->
+     <div class="album">
+      <a href="Universidad.html">
+        <img src="peques/cris.jpg" alt="Cucurella^2">
+        <h2>Cucurella^2</h2>
+      </a>
+    </div>
+  </main>
+
+  <section class="seccion-interactiva">
+  <h2 onclick="toggleTexto()" class="titulo-desplegable">Querida Cristina</h2>
+  <div id="contenidoOculto" class="contenido-oculto">
+    <p>
+      Esta web la hemos hecho Carlos y yo (tengo que explotar sus dotes informáticos) para recopilar algunos de los momentos que hemos pasado juntas hasta ahora.
+    </p>
+    <p>
+     Desde que tengo memoria has estado ahí junto a mí apoyándome en cada etapa de mi vida y espero que tú sientas el mismo apoyo de mi parte. Cada carpeta representa una etapa y está nombrada por el mote que teníamos en ese momento JAJAJA. 
+    </p>
+    <p>
+      Hay algunas fotos que faltan por problemas técnicos pero si las quieres las tengo en nuestra carpeta Jijiji .
+    </p>
+    <p>
+      Y bueno como podrás ver ahí hay una vacía que está esperando a ser llenada de fotos de la uni. Sé que la vamos a llenar de recuerdos igual de especiales (o incluso mejores).
+    </p>
+    Gracias por estar siempre, te iubesc mi Cris💖
+  </div>
+</section>
+
+
+  <footer>
+    <p>Creado con 💖 por Paula</p>
+  </footer>
+  <script>
+  function toggleTexto() {
+    const contenido = document.getElementById("contenidoOculto");
+    contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

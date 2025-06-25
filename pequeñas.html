@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Álbum: Lokura💫</title>
+  <link rel="stylesheet" href="styleal.css" />
+</head>
+<body>
+  <header>
+    <h1>Lokura💫</h1>
+    <a href="index.html" class="volver">← Volver</a>
+  </header>
+
+  <main class="galeria-cascada">
+    <img src="peques/ptpeq.jpg" alt="Foto 1" onclick="abrirLightbox(this)">
+    <img src="peques/IMG-20250622-WA0001.jpg" alt="Foto 2" onclick="abrirLightbox(this)">
+    <img src="peques/IMG-20250622-WA0005.jpg" alt="Foto 4" onclick="abrirLightbox(this)">
+    <img src="peques/IMG-20250622-WA0006.jpg" alt="Foto 4" onclick="abrirLightbox(this)">
+    <img src="peques/IMG-20250622-WA0007.jpg" alt="Foto 4" onclick="abrirLightbox(this)">
+    <img src="peques/IMG-20250622-WA0010.jpg" alt="Foto 4" onclick="abrirLightbox(this)">
+    <img src="peques/IMG-20250622-WA0175.jpg" alt="Foto 4" onclick="abrirLightbox(this)">
+
+    <!-- Añade más fotos -->
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="cerrarLightbox()">
+    <span class="cerrar">✕</span>
+    <img id="lightbox-img" src="" alt="Foto en grande">
+  </div>
+
+  <footer>
+    <p>Creado con 💖 por Paula</p>
+  </footer>
+
+  <script>
+    function abrirLightbox(img) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    }
+
+    function cerrarLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
